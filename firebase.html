@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+	</head>
+	<body>
+	
+	    <input type="text" id="name" placeholder="type your name">
+		
+		<button  onclick="wrtedata()">Submit</button>
+
+
+			
+			
+			
+			<!-- The core Firebase JS SDK is always required and must be listed first -->
+			<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+   
+			<!-- TODO: Add SDKs for Firebase products that you want to use
+				 https://firebase.google.com/docs/web/setup#available-libraries -->
+			<script src="https://firebase.google.com/docs/web/setup#available-libraries"></script>
+
+			<script>
+			  // Your web app's Firebase configuration
+			  var firebaseConfig = {
+				apiKey: "AIzaSyDZVlXm3E4sSFYPpD2jHECAp1t-0TCi7oA",
+				authDomain: "sacred-reality-307612.firebaseapp.com",
+				projectId: "sacred-reality-307612",
+				storageBucket: "sacred-reality-307612.appspot.com",
+				messagingSenderId: "737117318701",
+				appId: "1:737117318701:web:f49924d505dbc4569012a4"
+			  };
+			  // Initialize Firebase
+			  firebase.initializeApp(firebaseConfig);
+			  
+			  	function wrtedata(){
+			    
+			     firebase.database().ref("User").set({
+				      name : document.getELementById('name').value
+				 });
+			}
+			</script>
+	</body>
+
+</html>
